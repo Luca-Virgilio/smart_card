@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    .row.banner
+        .col-12.review-header
+            h1= title
+    
+    .row
+        .col-12
+            .card.card-primary.review-header
+                .card-block
+                h2 Spiegazione
+                p #{description} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, corrupti voluptatum debitis sequi doloribus molestias illo vitae voluptas aperiam consequuntur dolore expedita ipsam quia minima error placeat quam voluptate tempore.
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit id quibusdam tempora labore iusto est perspiciatis! Reprehenderit, perferendis quo earum commodi doloremque molestiae illum a obcaecati explicabo ad incidunt amet?
+                br
+                p Per accedere alla votazione, assicurarsi di inserire la tessera sanitaria nel lettore 
+    .row
+        .col-12.col-md-6.offset-md-3
+            a.btn.btn-primary.btn-lg.btn-block(href=`/login/question`) procedi al voto
