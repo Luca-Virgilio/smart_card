@@ -1,6 +1,7 @@
 // version http without engine
 const votingController = (req, res) => {
-    console.log(req.params.vote);
+    console.log('body:');
+    console.log(req.body);
 
     res
         .json({ msg: 'vote ' });

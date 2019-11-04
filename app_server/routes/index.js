@@ -10,6 +10,6 @@ const ctrlVote = require('../controllers/vote');
 // router.get('/result', ctrlMain.resultController);
 // router.get('/login/question', ctrlMain.questionController);
 
-router.post('/:vote', ctrlVote.votingController);
+router.post('/', ctrlVote.votingController);
 
 module.exports = router;
