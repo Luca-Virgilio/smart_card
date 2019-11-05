@@ -44,9 +44,12 @@
             <div class="col-12 col-md-6 offset-md-3">
                 <div class="card card-primary review-card">
                     <!-- oneClick event to simulate smart reader-->
-                    <button  class="btn btn-primary btn-lg btn-block" onclick="post('/api/event',{name:'luca'})">
-                    Procedi al voto
-                    </button>
+                    <form action="/api/event" method="post" enctype='application/json'>
+                        <input name='name' value=''>
+                        <button  class="btn btn-primary btn-lg btn-block">
+                            Procedi al voto
+                            </button>
+                    </form>
                 </div>
             </div>
      </div>
@@ -64,7 +67,7 @@
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data)
                 });
-                window.location.href = '/question.html';
+                //window.location.href = '/question.html';
         }
         </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
