@@ -43,9 +43,10 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
                 <div class="card card-primary review-card">
-                    <div class="card-block"><a class="btn btn-primary btn-lg btn-block" href="question.html">procedi al
-                            voto</a>
-                    </div>
+                    <!-- oneClick event to simulate smart reader-->
+                    <button  class="btn btn-primary btn-lg btn-block" onclick="post('/api/event',{name:'luca'})">
+                    Procedi al voto
+                    </button>
                 </div>
             </div>
      </div>
@@ -54,6 +55,18 @@
                 <div class="col-12"><small>&copy; e-voting test, efebia, 2019</small></div>
             </div>
         </footer>
+        <script>
+            async function post(path, data) {
+                console.log(path);
+                console.log(data);
+                const res = await fetch(path, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+                window.location.href = '/question.html';
+        }
+        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>

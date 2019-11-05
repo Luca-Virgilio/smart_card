@@ -12,4 +12,7 @@ const ctrlVote = require('../controllers/vote');
 
 router.post('/', ctrlVote.votingController);
 
+// only for simulate an event
+router.post('/event', ctrlVote.eventController);
+
 module.exports = router;
