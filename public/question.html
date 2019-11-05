@@ -35,14 +35,14 @@
             </div>
             <div class="card-group">
                 <div class="card">
-                    <button onclick="post2('/api',{vote:'mare'})"> <img class="featurette-image img-fluid"
+                    <button onclick="post('/api',{vote:'mare'})"> <img class="featurette-image img-fluid"
                             src="/images/mare.jpg">
                         <h5>Mare</h5>
                     </button>
                 </div>
                 <div class="card">
-                    <button onclick="post2('/api','montagna')" href="/result.html"> <img
-                            class="featurette-image img-fluid " src="/images/montagna.jpg">
+                    <button onclick="post('/api',{vote:'montagna'})"> <img class="featurette-image img-fluid "
+                             src="/images/montagna.jpg">
                         <h5>Montagna</h5>
                     </button>
                 </div>
@@ -56,7 +56,7 @@
         </footer>
     </div>
     <script>
-        async function post2(path, data) {
+        async function post(path, data) {
             console.log(path);
             console.log(data);
             const res = await fetch(path, {
