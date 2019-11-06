@@ -19,7 +19,6 @@ const votingController = (req, res) => {
 const eventController = async (req, res) => {
     console.log(req.body.name + ' try to access page...');
     //addUser(req.body.name);
-    //getUser(req.body.name, res);
     const hash = crypto.createHash('sha256').update(req.body.name).digest('base64');
     try {
         const result = await UserDB.find({ name: hash });
