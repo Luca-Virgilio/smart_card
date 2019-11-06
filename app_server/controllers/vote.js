@@ -55,21 +55,6 @@ const addUser = async (user) => {
     }
 };
 
-const getUser = async (user, res) => {
-    const query = { name: user };
-    try {
-        result = await UserDB.find(query);
-        console.log(result);
-        if (result.length > 0) {
-            res.redirect('/question.html');
-        } else {
-            res.redirect('/login.html');
-        }
-    } catch (error) {
-        console.log(error);
-    }
-
-};
 
 
 module.exports = {
